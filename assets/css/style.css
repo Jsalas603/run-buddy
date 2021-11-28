@@ -334,6 +334,7 @@
 
   .flex-row {
     display: flex;
+    text-align: center;
   }
   
   /* REACH OUT STYLES END */
