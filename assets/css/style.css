@@ -12,6 +12,16 @@
   
   /* apply styles to <header> */
   header {
+    background-attachment: fixed;
+    background-position: 80%;
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    /* vendor prefix some browser will require a brower-specific prefix to work on that browser until it becomes standardlized */
+    position: -webkit-sticky;
+    position: sticky;
+    /* top propert is important to let the browser know where to pus the stick element */
+    top: 0;
     padding: 20px 35px;
     background-color: #39a6b2;
     display: flex;
@@ -20,6 +30,8 @@
   }
   
   header h1 {
+    /* adding shadow box here */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
@@ -43,6 +55,7 @@
   }
   
   header nav ul li a {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
@@ -78,6 +91,8 @@
   
   /* Hero Style Start */
   .hero {
+    background-attachment: fixed;
+    background-position: 80%;
     background-image: url('../images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -97,14 +112,17 @@
   }
 
   .hero-cta h2 {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-style: italic;
     font-size: 55px;
     color: #fce138;
   }
 
   .hero-form {
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 3px solid #024e76;
-    background-color: #fce138;
+    background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
     color: #024e76;
   }
@@ -120,6 +138,8 @@
   }
   
   .form-input {
+    background-color: rgba(255, 225, 255, 0.75);
+    border-radius: 10px;
     border: 1px solid #024e76;
     display: block;
     padding: 7px 15px;
@@ -134,6 +154,7 @@
   }
   
   .hero-form button {
+    border-radius: 10px;
     color: #fce138;
     background-color: #024e76;
     border: none;
@@ -195,7 +216,7 @@
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
+   
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -313,6 +334,8 @@
   }
 
   .contact-form input, .contact-form textarea {
+    background-color: rgba(255, 225, 255, 0.75);
+    border-radius: 10px;
     border: 1px solid #024e76;
     display: block;
     padding: 7px 15px;
@@ -324,6 +347,7 @@
   }
 
   .contact-form button {
+    border-radius: 10px;
     width: 100%;
     border: none;
     background: #fce138;
@@ -341,6 +365,7 @@
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
 @media screen and (max-width: 980px) {
  header {
+   position: relative; 
    padding-bottom: 0;
    justify-content: center;
  }
@@ -446,4 +471,40 @@
     order: 3;
   }
 
+}
+
+/* psueado-classes */
+header nav ul li a:hover {
+  background: #fce138;
+  color: #024e76;
+  border-radius: 15px;
+  text-shadow: none;
+}
+
+.hero-form button:hover {
+  background-color: #39a6b2;
+}
+
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
+}
+
+.contact-form button:hover {
+  color: #fce138;
+  background: #39a6b2;
+}
+
+.form-input:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+
+.step:not(:last-child) {
+  border-bottom: 1px solid #39a6b2;
 }
